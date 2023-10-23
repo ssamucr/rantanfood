@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+    --primary-color: #273B27;
+    --secondary-color: #59e15d;
+    --emphasis-color: #DEFADF;
+    --button-color: #CF9AB2;
+    --light-font-color: #ffffff;
+    --font-color: #333333;
+    --background-color: #F2F2F2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--light-font-color);
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #333333;
+}
+
+header {
+    background-color: var(--primary-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 2em;
+    color: #ffffff;
+    gap: 2em;
+}
+
+.header .logo-container .logo {
+    filter: invert();
+    height: 3.5em;
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+    flex: 1;
+    min-width: 20em;
+}
+
+.search {
+    border: none;
+    width: 100%;
+    border-radius: 0.5em;
+    padding: .5em;
+    color: #333333;
+    padding-left: 4em;
+    font-size: 1em;
+}
+
+.search::placeholder {
+    color: #999;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 1.5em;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.elements-main-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+}
+
+.elements-main-menu li a {
+    color: var(--light-font-color);
+    text-decoration: none;
+    position: relative;
+}
+
+.elements-main-menu li a:hover {
+    color: var(--secondary-color);
+}
+
+.elements-main-menu li a::after {
+    content: "";
+    position: absolute;
+    background-color: var(--secondary-color);
+    height: .10em;
+    width: 0;
+    top: calc(100% + .25em);
+    left: 0;
+    transition: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.elements-main-menu li a:hover::after {
+    width: 100%;
+}
+
+.elements-main-menu li a.selected::after {
+    width: 100%;
+}
+
+.elements-main-menu li a.selected {
+    color: var(--secondary-color);
+}
+
+.personal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.login-button {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--font-color);
+    text-decoration: none;
+    background-color: var(--emphasis-color);
+    padding: 0.6em;
+    border: none;
+    transition: all .2s ease-in-out;
+}
+
+.login-hidden {
+    display: none;
+}
+
+.login-button:hover {
+    color: #000000;
+    background-color: var(--secondary-color);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+
+.profile svg {
+    filter: invert();
+    background-color: #999999;
+    padding: 0.3em;
+    border-radius: 50%;
+}
+
+.profile a {
+    display: flex;
+    gap: 0.3em;
+    text-decoration: none;
+    color: var(--light-font-color);
+    transition: color 0.1s ease-in-out;
+}
+
+.profile a:hover {
+    color: var(--secondary-color);
+}
+
+.profile p a i {
+    font-size: 0.7em;
+}
