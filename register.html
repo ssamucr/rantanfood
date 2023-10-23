@@ -3,113 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear cuenta</title>
-    <style>
-        body {
-                width: 100%;
-                height: 100vh;
-                background: linear-gradient(45deg, red, blue, pink);
-                background-size: 400% 400%;
-                position: relative;
-                animation: cambiar 10s ease-in-out infinite;
-                color: #fff;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                margin: 0;
-                font-family: Arial, sans-serif;
-            }
-
-            @keyframes cambiar{
-                0%{background-position: 0 50%;}
-                50%{background-position: 100% 50%;}
-                100%{background-position: 0 50%;}
-        }
-
-        .signup-container {
-            text-align: left;
-            padding: 40px;
-            border-radius: 2px;
-            box-shadow: 0 0 10px rgb(255, 246, 246);
-            background-color: #1c1b1b;
-        }
-
-        .logo img {
-            width: 80px;
-            margin-right: 10px;
-        }
-
-        .signup-heading {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #777;
-            border-radius: 2px;
-        }
-
-        .signup-btn {
-            background-color: #eb3e89;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        .signup-btn:hover {
-            background-color: #e7afce;
-            color: #0a0a0a;
-        }
-    </style>
+    <title>Rantan Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./register.css">
 </head>
-
 <body>
-    <div class="signup-container">
-        <div class="logo">
-            <img src="bar.png" alt="Logo">
-        </div>
-        <div class="signup-heading">
-            Crear cuenta
-        </div>
-        <div class="form-group">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-        </div>
-        <div class="form-group">
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required>
-        </div>
-        <div class="form-group">
-            <label for="contrasena">Reescribir Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required>
-        </div>
-        <button class="signup-btn" type="submit">Crear Cuenta</button>
-    </div>
+    <main class="main">
+        <form action="" method="post" class="register-form">
+            <p class="register-title">Registro</p>
+            <p class="register-message">¡Regístrate! para realizar reservaciones.</p>
+            <div class="flex">
+                <label>
+                    <span>Nombre</span>
+                    <input required="" placeholder="Nombre" type="text" class="input">
+                </label>
+        
+                <label>
+                    <span>Apellido</span>
+                    <input required="" placeholder="Apellido" type="text" class="input">
+                </label>
+            </div>
+                    
+            <label>
+                <span>Correo</span>
+                <input required="" placeholder="Correo" type="email" class="input">
+            </label> 
+                
+            <label>
+                <span>Contraseña</span>
+                <input required="" placeholder="Contraseña" type="password" class="input">
+            </label>
+            <label>
+                <span>Confirma tu contraseña</span>
+                <input required="" placeholder="Confirma tu contraseña" type="password" class="input">
+            </label>
+            <button class="submit">Registrarse</button>
+            <p class="signin">¿Ya tienes una cuenta? <a href="./index.html">Inicia sesión</a> </p>
+        </form>
+    </main>
 </body>
-
 </html>
