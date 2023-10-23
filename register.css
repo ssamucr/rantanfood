@@ -1,0 +1,113 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: .625em;
+    background-color: var(--background-color);
+    padding: 2.5em;
+    border-radius: 1.25em;
+    color: var(--font-color);
+  }
+  
+  .register-title {
+    font-size: 1.75em;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: -0.0625em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 1.875em;
+  }
+  
+  .register-title::before,.register-title::after {
+    position: absolute;
+    content: "";
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    left: 0em;
+    background-color: var(--primary-color);
+  }
+  
+  .register-title::before {
+    width: 1.125em;
+    height: 1.125em;
+    background-color: var(--primary-color);
+  }
+  
+  .register-title::after {
+    width: 1.125em;
+    height: 1.125em;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: .875em;
+    text-align: center;
+  }
+  
+  .signin a {
+    color: var(--primary-color);
+  }
+  
+  .signin a:hover {
+    text-decoration: underline var(--primary-color);
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 1.5em;
+  }
+
+  .register-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  .register-form label .input {
+    width: 100%;
+    padding: .625em;
+    outline: 0;
+    border: .0625em solid rgba(105, 105, 105, 0.397);
+    border-radius: .625em;
+    font-size: 0.9em;
+  }
+  
+  .submit {
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    padding: .625em;
+    border-radius: .625em;
+    color: #fff;
+    font-size: 1em;
+    transform: .3s ease;
+    font-weight: bold;
+  }
+  
+  .submit:hover {
+    background-color: var(--secondary-color);
+    color: black;
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
