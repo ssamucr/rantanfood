@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rantan Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./reservaciones.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo-container">
+                <a href="./index.html"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+            </div>
+
+            <div class="search-container">
+                <i class="fa fa-search search-icon"></i>
+                <input type="search" class="search" placeholder="Buscar restaurante">
+            </div>
+
+            <nav class="main-menu">
+                <ol class="elements-main-menu">
+                    <li><a href="./reservaciones.html" class="selected">Reservaciones</a></li>
+                    <li><a href="./soporte.html" class="">Soporte</a></li>
+                </ol>
+            </nav>
+
+            <div class="personal">
+                <div class="profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 448 512"><<path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+                    <p>Perfil<br><a href="#">Más opciones <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="reservaciones-container">                
+            <div class="reservacion">
+                <h2>Restaurante: <a href="./inforest.html">Da Stefano's</a></h2>
+                <div class="reservacion-content">
+                    <div class="reservacion-date">
+                        <p>Fecha: 28/10/2023</p>
+                        <p>Hora: 01:30 p.m.</p>
+                    </div>
+                    <div class="reservacion-count">
+                        <p>Cantidad de adultos: 2</p>
+                        <p>Cantidad de niños: 1</p>
+                        <p>Sillas para bebé: Sí <i class="fa-solid fa-circle-check"></i></p>
+                    </div>
+                    <div class="reservacion-cancelar">
+                        <button onclick="" class="reservacion-cancelar-btn">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reservacion">
+                <h2>Restaurante: <a href="./inforest.html">Hamburguesía</a></h2>
+                <div class="reservacion-content">
+                    <div class="reservacion-date">
+                        <p>Fecha: 3/11/2023</p>
+                        <p>Hora: 04:30 p.m.</p>
+                    </div>
+                    <div class="reservacion-count">
+                        <p>Cantidad de adultos: 4</p>
+                        <p>Cantidad de niños: 2</p>
+                        <p>Sillas para bebé: No <i class="fa-solid fa-circle-xmark"></i></p>
+                    </div>
+                    <div class="reservacion-cancelar">
+                        <button onclick="" class="reservacion-cancelar-btn">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reservacion">
+                <h2>Restaurante: <a href="./inforest.html">Arepa Truck</a></h2>
+                <div class="reservacion-content">
+                    <div class="reservacion-date">
+                        <p>Fecha: 5/11/2023</p>
+                        <p>Hora: 06:00 p.m.</p>
+                    </div>
+                    <div class="reservacion-count">
+                        <p>Cantidad de adultos: 6</p>
+                        <p>Cantidad de niños: 0</p>
+                        <p>Sillas para bebé: No <i class="fa-solid fa-circle-xmark"></i></p>
+                    </div>
+                    <div class="reservacion-cancelar">
+                        <button onclick="" class="reservacion-cancelar-btn">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="#"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+            <p>© 2021 Rantan Food | Todos los derechos reservados</p>
+        </div>
+
+        <div class="footer-menu">
+            <ol class="elements-footer-menu">
+                <li><a href="./reservaciones.html" class="selected">Reservaciones</a></li>
+                <li><a href="./soporte.html" class="">Soporte</a></li>
+            </ol>
+        </div>
+    </footer>
+</body>
+</html>

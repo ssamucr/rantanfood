@@ -1,0 +1,41 @@
+main {
+    padding: 3em;
+}
+
+.soporte-container {
+    max-width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em 3em;
+    background-color: var(--background-color);
+}
+
+.soporte-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.soporte-conocenos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.soporte-conocenos p {
+    text-align: justify;
+}
+
+.soporte-container h2 {
+    font-size: 2em;
+}
+
+.soporte-container p {
+    font-size: 1em;
+}
+
+.soporte-contact p i {
+    margin: 1em 0.5em 1em 1em;
+}
