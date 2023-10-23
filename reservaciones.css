@@ -1,0 +1,63 @@
+main {
+    min-height: 95vh;
+}
+
+/* Estilo relacionado con el contenido principal de la página (Listado de reservaciones) */
+
+.reservaciones-container {
+    padding: 1.5em 3em;
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* Inicia estilo de los cards */
+
+.reservacion {
+    padding: 1.5em;
+    box-shadow: 0.9375rem .9375em 1.875em #bebebe, -0.9375em -0.9375em 1em #ffffff;
+    transition: 0.2s ease-in-out;
+    border-radius: 0.5em;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.reservacion:hover {
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+.reservacion .reservacion-content i {
+    margin: 0 0.3em;
+}
+
+.reservacion-cancelar-btn {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--font-color);
+    text-decoration: none;
+    border: none;
+    background-color: var(--emphasis-color);
+    padding: 0.3em 0.6em;
+    transition: all .2s ease-in-out;
+}
+
+.reservacion-cancelar-btn:hover {
+    color: #000000;
+    background-color: var(--secondary-color);
+}
+
+.reservacion-content {
+    display: flex;
+    gap: 4em;
+}
+
+.reservacion-cancelar {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Termina estilo de los cards */
