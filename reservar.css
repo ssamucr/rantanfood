@@ -1,0 +1,57 @@
+#reservarmodal {
+    margin: auto;
+    border: none;
+    border-radius: 0.4em;
+}
+
+#reservarmodal::backdrop {
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.reservar-container .reservar-content {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2em;
+    padding: 2em;
+    border-radius: 0.4em;
+    overflow: hidden;
+}
+
+.reservar-container .reservar-content .reservar-logo img {
+    height: 3em;
+}
+
+.reservar-container .reservar-content .reservar-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.reservar-container .reservar-content .reservar-form input {
+    border: 1px solid #3333333c;
+    border-bottom: 3px solid #33333359;
+    border-radius: 0.5em;
+    padding: 0.7em;
+    color: #333333;
+    font-size: 0.9em;
+}
+
+.reservar-container .reservar-content .reservar-form input::placeholder {
+    color: #999;
+}
+
+.reservar-container .reservar-content .reservar-back {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.reservar-container .reservar-content #reservar-back-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}

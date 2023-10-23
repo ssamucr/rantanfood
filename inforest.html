@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rantan Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./inforest.css">
+    <link rel="stylesheet" href="./reservar.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo-container">
+                <a href="./index.html"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+            </div>
+
+            <div class="search-container">
+                <i class="fa fa-search search-icon"></i>
+                <input type="search" class="search" placeholder="Buscar restaurante">
+            </div>
+
+            <nav class="main-menu">
+                <ol class="elements-main-menu">
+                    <li><a href="#" class="">Reservaciones</a></li>
+                    <li><a href="#" class="">Soporte</a></li>
+                </ol>
+            </nav>
+
+            <div class="personal">
+                <button id="login-open" class="login-button">Iniciar sesión</button>
+                <div class="profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 448 512"><<path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+                    <p>Perfil<br><a href="#">Más opciones <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="restaurant-header">
+            <h2>Da Stefano's</h2>
+            <p>Regular $$ | <i class="fa-solid fa-bowl-food"></i> Comida Italiana | <i class="fa-solid fa-location-dot"></i> Calle 38 Este, Casa I-36 - Bella Vista | <i class="fa-solid fa-phone"></i> 209-2339 / 6852-6974 | <i class="fa-solid fa-laptop"></i> <a href="https://www.facebook.com/dastefanotrattoria" target="_blank">Página web</a> | <i class="fa-solid fa-utensils"></i> <a href="https://www.degustapanama.com/panama/restaurante/da-stefano-trattoria_102299.html" target="_blank">Menú</a> | <i class="fa-regular fa-clock"></i> 12:00 pm - 9:00 pm</p>
+        </div>
+
+        <div class="restaurant-content">
+            <div class="best-dishes-container">
+                <div class="card">
+                    <img src="./img/comidas/restaurante3_plato1.jpeg" alt="Plato de comida" class="card__image">
+                    <h3>Pasta a la boloñesa</h3>
+                    <div class="card__content">
+                        <p class="card__title">Pasta a la boloñesa</p>
+                        <p class="card__description">La pasta a la boloñesa es un plato clásico italiano que consiste en una deliciosa mezcla de pasta cocida al dente y una salsa abundante de tomate, carne molida de res, cebolla, ajo y hierbas, todo coronado con queso rallado.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./img/comidas/restaurante3_plato2.jpeg" alt="Plato de comida" class="card__image">
+                    <h3>Pasta alla puttanesca</h3>
+                    <div class="card__content">
+                        <p class="card__title">Pasta alla puttanesca</p>
+                        <p class="card__description">La pasta alla puttanesca es un plato italiano tradicional que combina pasta con una sabrosa salsa de tomate, aceitunas, alcaparras, ajo y guindilla, creando un sabor fuerte y delicioso que a menudo se adereza con perejil fresco y queso rallado.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./img/comidas/restaurante3_plato3.jpeg" alt="Plato de comida" class="card__image">
+                    <h3>Pasta alla marinara</h3>
+                    <div class="card__content">
+                        <p class="card__title">Pasta alla marinara</p>
+                        <p class="card__description">La pasta alla marinara es un plato italiano clásico que presenta pasta acompañada de una salsa marinara, una salsa de tomate espesa y sazonada con ajo, albahaca, orégano y otras hierbas, a menudo adornada con aceitunas y alcaparras, creando una combinación deliciosa y reconfortante.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="information-container">
+                <div class="desc-container">
+                    <h3>Detalles</h3>
+                    <p class="bold">Tipo de comida</p>
+                    <p>El restaurante Da Stefanos ofrece auténtica comida italiana con exquisitas pastas al dente, pizzas de masa crujiente y sabrosos platos tradicionales, todo preparado con ingredientes frescos y sazón casera que capturan la esencia de la cocina italiana.</p>
+                    <p class="bold">Facilidades</p>
+                    <p>Sillas para bebe, menú de niños, Accesible para personas con discapacidad móvil.</p>
+                    <p class="bold">Horario</p>
+                    <p>12:00 pm - 9:00 pm</p>
+                    <div class="restaurant-reservar">
+                        <button class="reservar-button">Reservar <i class="fa-solid fa-book"></i></button>
+                    </div>
+                </div>
+                <div class="location-container">
+                    <p class="bold">Ubicación y contacto</p>
+                    <img src="./img/location.jpeg" alt="localización en mapa">
+                    <p><i class="fa-solid fa-location-dot"></i> Calle 38 Este, Casa I-36 - Bella Vista</p>
+                    <p><i class="fa-solid fa-phone"></i> 209-2339 / 6852-6974</p>
+                    <p><i class="fa-regular fa-envelope"></i> dastefanopty@gmail.com</p>
+                    <p><i class="fa-solid fa-laptop"></i> <a href="https://www.facebook.com/dastefanotrattoria" target="_blank">Página web</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="#"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+            <p>© 2021 Rantan Food | Todos los derechos reservados</p>
+        </div>
+
+        <div class="footer-menu">
+            <ol class="elements-footer-menu">
+                <li><a href="#" class="">Reservaciones</a></li>
+                <li><a href="#" class="">Soporte</a></li>
+            </ol>
+        </div>
+    </footer>
+
+    <dialog id="loginmodal">
+        <div class="login-container">
+            <div class="login-image">
+                <img src="./img/login.jpg" alt="Imagen de personas riendo en un restaurante">
+            </div>
+            <div class="login-content">
+                <div class="login-back">
+                    <button id="login-back-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="login-logo">
+                    <img src="./img/logo.png" alt="Logo de Rantan Food">
+                </div>
+                <h2 class="login-heading">Inicio de Sesión</h2>
+                <form action="" method="dialog" class="login-form">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Correo" required autocomplete="off">
+                    <p class="create-account-link">¿No tiene una cuenta? <a href="#">Crear una cuenta</a></p>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required autocomplete="off">
+                    <p class="forgotpassword"><a href="#">¿Olvidó su contraseña?</a></p>
+                    <button class="login-button" type="submit">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="reservarmodal">
+        <div class="reservar-container">
+            <div class="reservar-content">
+                <div class="reservar-back">
+                    <button id="reservar-back-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="reservar-logo">
+                    <img src="./img/logo.png" alt="Logo de Rantan Food">
+                </div>
+                <h2 class="reservar-heading">Formulario de reservación</h2>
+                <form action="#" method="dialog" class="reservar-form">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="hora" required>
+
+                    <label for="adultos">Cantidad de adultos:</label>
+                    <input type="number" id="adultos" name="adultos" required placeholder="Cantidad de adultos">
+
+                    <label for="ninos">Cantidad de niños:</label>
+                    <input type="number" id="ninos" name="ninos" required placeholder="Cantidad de niños">
+
+                    <label for="babychair">Silla para bebé:</label>
+                    <div class="babychair-radio-btn">
+                        <input type="radio" id="babychairyes" name="babychair" required>
+                        <label for="babychairyes">Sí</label>
+                        <input type="radio" id="babychairno" name="babychair" required>
+                        <label for="babychairno">No</label>
+                    </div>
+
+                    <button class="reservar-button" type="submit">Reservar</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="./loginmodal.js"></script>
+    <script src="./reservarmodal.js"></script>
+</body>
+</html>
