@@ -50,7 +50,7 @@
     transition: 0.2s ease-in-out;
     border-radius: 0.5em;
     z-index: 1;
-    max-width: 19em;;
+    max-width: 19em;
 }
 
 .restaurant:hover {
@@ -118,3 +118,21 @@
 }
 
 /* Termina estilo de los cards */
+
+@media screen and (max-width: 834px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .filter-form {
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+    }
+
+    .filter fieldset {
+        min-width: 10em;
+    }
+}

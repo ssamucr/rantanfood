@@ -5,7 +5,7 @@ main {
 /* Estilo relacionado con el contenido principal de la página (Listado de reservaciones) */
 
 .reservaciones-container {
-    padding: 1.5em 3em;
+    padding: 1.5em 2em;
     display: flex;
     gap: 2em;
     flex-wrap: wrap;
@@ -61,3 +61,9 @@ main {
 }
 
 /* Termina estilo de los cards */
+
+@media screen and (max-width: 834px) {
+    .reservacion-content {
+        gap: 1em;
+    }
+}

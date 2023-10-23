@@ -55,3 +55,21 @@
 .elements-footer-menu li a.selected {
     color: var(--secondary-color);
 }
+
+@media screen and (max-width: 834px) {
+    .footer {
+        padding: 2em 3em 0.5em;
+    }
+
+    .footer-menu {
+        display: none;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        width: 100%;
+    }
+}
