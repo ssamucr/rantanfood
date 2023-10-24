@@ -150,6 +150,7 @@
 
   .best-dishes-container {
     gap: 2em;
+    align-items: center;
   }
 
   .card {
