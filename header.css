@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 :root {
-    --primary-color: #273B27;
-    --secondary-color: #59e15d;
-    --emphasis-color: #DEFADF;
-    --button-color: #CF9AB2;
+    --primary-color: #c33149;
+    --secondary-color: #c29979;
+    --emphasis-color: #f3d9b1;
+    --button-color: #a8c256;
     --light-font-color: #ffffff;
     --font-color: #333333;
     --background-color: #F2F2F2;
