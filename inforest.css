@@ -64,7 +64,7 @@
 /* Inicia estilo relaciona a los cards de mejores platos */
 .card {
     position: relative;
-    width: 25em;
+    min-width: 25em;
     aspect-ratio: 16/9;
     background-color: #f2f2f2;
     border-radius: .625em;
@@ -141,3 +141,18 @@
   }
 
 /* Termina estilo relaciona a los cards de mejores platos*/
+
+@media screen and (max-width: 834px) {
+  .best-dishes-container, .information-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .best-dishes-container {
+    gap: 2em;
+  }
+
+  .card {
+    min-width: 20em;
+  }
+}
