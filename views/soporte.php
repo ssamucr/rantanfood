@@ -72,7 +72,7 @@
                       </ul>
                     </nav>
                 </label>
-                <a href="../index.html" title="Página de inicio de RantanFood"><img src="../img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+                <a href="../index.php" title="Página de inicio de RantanFood"><img src="../img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
             </div>
 
             <div class="search-container">
