@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rantan Food</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./views/styles/header.css">
-    <link rel="stylesheet" href="./views/styles/soporte.css">
-    <link rel="stylesheet" href="./views/styles/footer.css">
-    <link rel="stylesheet" href="./views/styles/login.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/soporte.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/login.css">
 </head>
 <body>
     <header>
@@ -53,7 +53,7 @@
                           </button>
                         </li>
                         <li>
-                          <button onclick="window.location.href = './soporte.html'">
+                          <button onclick="window.location.href = './soporte.php'">
                             <svg fill="currentColor" viewBox="0 0 512 512" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
                             </svg>
@@ -72,7 +72,7 @@
                       </ul>
                     </nav>
                 </label>
-                <a href="./index.html"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+                <a href="../index.html" title="Página de inicio de RantanFood"><img src="../img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
             </div>
 
             <div class="search-container">
@@ -83,7 +83,7 @@
             <nav class="main-menu">
                 <ol class="elements-main-menu">
                     <li><a href="./reservaciones.html" class="">Reservaciones</a></li>
-                    <li><a href="./soporte.html" class="selected">Soporte</a></li>
+                    <li><a href="./soporte.php" class="selected">Soporte</a></li>
                 </ol>
             </nav>
 
@@ -122,14 +122,14 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <a href="#"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+            <a href="#" title="Volver arriba"><img src="../img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
             <p>© 2021 Rantan Food | Todos los derechos reservados</p>
         </div>
 
         <div class="footer-menu">
             <ol class="elements-footer-menu">
                 <li><a href="./reservaciones.html" class="">Reservaciones</a></li>
-                <li><a href="./soporte.html" class="selected">Soporte</a></li>
+                <li><a href="./soporte.php" class="selected">Soporte</a></li>
             </ol>
         </div>
     </footer>
@@ -137,14 +137,14 @@
     <dialog id="loginmodal">
         <div class="login-container">
             <div class="login-image">
-                <img src="./img/login.jpg" alt="Imagen de personas riendo en un restaurante">
+                <img src="../img/login.jpg" alt="Imagen de personas riendo en un restaurante">
             </div>
             <div class="login-content">
                 <div class="login-back">
                     <button id="login-back-btn"><i class="fa-solid fa-xmark"></i></button>
                 </div>
                 <div class="login-logo">
-                    <img src="./img/logo.png" alt="Logo de Rantan Food">
+                    <img src="../img/logo.png" alt="Logo de Rantan Food">
                 </div>
                 <h2 class="login-heading">Inicio de Sesión</h2>
                 <form action="#" method="dialog" class="login-form">

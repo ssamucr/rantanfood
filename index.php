@@ -60,7 +60,7 @@
                           </button>
                         </li>
                         <li>
-                          <button onclick="window.location.href = './views/soporte.html'">
+                          <button onclick="window.location.href = './views/soporte.php'">
                             <svg fill="currentColor" viewBox="0 0 512 512" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
                             </svg>
@@ -90,7 +90,7 @@
             <nav class="main-menu">
                 <ol class="elements-main-menu">
                     <li><a href="./reservaciones.html" class="">Reservaciones</a></li>
-                    <li><a href="./soporte.html" class="">Soporte</a></li>
+                    <li><a href="./views/soporte.php" class="">Soporte</a></li>
                 </ol>
             </nav>
 
@@ -251,7 +251,7 @@
         <div class="footer-menu">
             <ol class="elements-footer-menu">
                 <li><a href="./reservaciones.html" class="">Reservaciones</a></li>
-                <li><a href="./soporte.html" class="">Soporte</a></li>
+                <li><a href="./views/soporte.php" class="">Soporte</a></li>
             </ol>
         </div>
     </footer>
