@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rantan Food</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./views/styles/header.css">
-    <link rel="stylesheet" href="./views/styles/footer.css">
-    <link rel="stylesheet" href="./views/styles/login.css">
-    <link rel="stylesheet" href="./views/styles/inforest.css">
-    <link rel="stylesheet" href="./views/styles/reservar.css">
+    <link rel="stylesheet" href="../views/styles/header.css">
+    <link rel="stylesheet" href="../views/styles/footer.css">
+    <link rel="stylesheet" href="../views/styles/login.css">
+    <link rel="stylesheet" href="../views/styles/inforest.css">
+    <link rel="stylesheet" href="../views/styles/reservar.css">
 </head>
 <body>
     <header>
@@ -73,7 +73,7 @@
                       </ul>
                     </nav>
                 </label>
-                <a href="./index.html"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+                <a href="../index.php"><img src="../img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
             </div>
 
             <div class="search-container">
@@ -101,60 +101,57 @@
 
     <main class="main">
         <div class="restaurant-header">
-            <h2>Da Stefano's</h2>
-            <p>Regular $$ | <i class="fa-solid fa-bowl-food"></i> Comida Italiana | <i class="fa-solid fa-location-dot"></i> Calle 38 Este, Casa I-36 - Bella Vista | <i class="fa-solid fa-phone"></i> 209-2339 / 6852-6974 | <i class="fa-solid fa-laptop"></i> <a href="https://www.facebook.com/dastefanotrattoria" target="_blank">Página web</a> | <i class="fa-solid fa-utensils"></i> <a href="https://www.degustapanama.com/panama/restaurante/da-stefano-trattoria_102299.html" target="_blank">Menú</a> | <i class="fa-regular fa-clock"></i> 12:00 pm - 9:00 pm</p>
+            <h2><?php echo $info[0]["nombre"] ?></h2>
+            <p><?php echo $info[0]["costo"] ?> | <i class="fa-solid fa-bowl-food"></i> <?php echo $info[0]["tipo_comida"] ?> | <i class="fa-solid fa-location-dot"></i> <?php echo $info[0]["direccion"] ?> | <i class="fa-solid fa-phone"></i> <?php echo $telefonos[0]["telefono"] ?> | <i class="fa-solid fa-laptop"></i> <a href="<?php echo $info[0]["sitio"] ?>" target="_blank" title="Sitio web de <?php echo $info[0]["nombre"] ?>">Página web</a> | <i class="fa-solid fa-utensils"></i> <a href="<?php echo $info[0]["menu"] ?>" target="_blank" title="Menú de <?php echo $info[0]["nombre"] ?>">Menú</a> | <i class="fa-regular fa-clock"></i> <?php echo $info[0]["horario"] ?></p>
         </div>
 
         <div class="restaurant-content">
             <div class="best-dishes-container">
-                <div class="card">
-                    <img src="./img/comidas/restaurante3_plato1.jpeg" alt="Plato de comida" class="card__image">
-                    <h3>Pasta a la boloñesa</h3>
-                    <div class="card__content">
-                        <p class="card__title">Pasta a la boloñesa</p>
-                        <p class="card__description">La pasta a la boloñesa es un plato clásico italiano que consiste en una deliciosa mezcla de pasta cocida al dente y una salsa abundante de tomate, carne molida de res, cebolla, ajo y hierbas, todo coronado con queso rallado.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./img/comidas/restaurante3_plato2.jpeg" alt="Plato de comida" class="card__image">
-                    <h3>Pasta alla puttanesca</h3>
-                    <div class="card__content">
-                        <p class="card__title">Pasta alla puttanesca</p>
-                        <p class="card__description">La pasta alla puttanesca es un plato italiano tradicional que combina pasta con una sabrosa salsa de tomate, aceitunas, alcaparras, ajo y guindilla, creando un sabor fuerte y delicioso que a menudo se adereza con perejil fresco y queso rallado.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="./img/comidas/restaurante3_plato3.jpeg" alt="Plato de comida" class="card__image">
-                    <h3>Pasta alla marinara</h3>
-                    <div class="card__content">
-                        <p class="card__title">Pasta alla marinara</p>
-                        <p class="card__description">La pasta alla marinara es un plato italiano clásico que presenta pasta acompañada de una salsa marinara, una salsa de tomate espesa y sazonada con ajo, albahaca, orégano y otras hierbas, a menudo adornada con aceitunas y alcaparras, creando una combinación deliciosa y reconfortante.</p>
-                    </div>
-                </div>
-
+                <?php
+                    foreach ($platos as $plato) {
+                        echo '<div class="card">';
+                        echo '<img src=".' . $plato["imagen"] . '" alt="Plato de comida" class="card__image">';
+                        echo '<h3>' . $plato["nombre"] . '</h3>';
+                        echo '<div class="card__content">';
+                        echo '<p class="card__title">' . $plato["nombre"] . '</p>';
+                        echo '<p class="card__description">' . $plato["descripcion"] . '</p>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                ?>
             </div>
             <div class="information-container">
                 <div class="desc-container">
                     <h3>Detalles</h3>
                     <p class="bold">Tipo de comida</p>
-                    <p>El restaurante Da Stefanos ofrece auténtica comida italiana con exquisitas pastas al dente, pizzas de masa crujiente y sabrosos platos tradicionales, todo preparado con ingredientes frescos y sazón casera que capturan la esencia de la cocina italiana.</p>
+                    <p><?php echo $info[0]["descripcion"] ?></p>
                     <p class="bold">Facilidades</p>
-                    <p>Sillas para bebe, menú de niños, Accesible para personas con discapacidad móvil.</p>
+                    <p><?php
+                    $cont = 1;
+                    foreach ($facilidades as $facilidad) {
+                        if ($cont == 1) {
+                            echo ucfirst($facilidad["facilidad"]) . ".";
+                        } elseif ($cont < count($facilidades)) {
+                            echo $facilidad["facilidad"] . ", ";
+                        } else {
+                            echo $facilidad["facilidad"] . ".";
+                        }
+                        $cont = $cont + 1;
+                    }
+                    ?></p>
                     <p class="bold">Horario</p>
-                    <p>12:00 pm - 9:00 pm</p>
+                    <p><?php echo $info[0]["horario"] ?></p>
                     <div class="restaurant-reservar">
                         <button class="reservar-button">Reservar <i class="fa-solid fa-book"></i></button>
                     </div>
                 </div>
                 <div class="location-container">
                     <p class="bold">Ubicación y contacto</p>
-                    <img src="./img/location.jpeg" alt="localización en mapa">
-                    <p><i class="fa-solid fa-location-dot"></i> Calle 38 Este, Casa I-36 - Bella Vista</p>
-                    <p><i class="fa-solid fa-phone"></i> 209-2339 / 6852-6974</p>
-                    <p><i class="fa-regular fa-envelope"></i> dastefanopty@gmail.com</p>
-                    <p><i class="fa-solid fa-laptop"></i> <a href="https://www.facebook.com/dastefanotrattoria" target="_blank">Página web</a></p>
+                    <img src="../img/location.jpeg" alt="localización en mapa">
+                    <p><i class="fa-solid fa-location-dot"></i> <?php echo $info[0]["direccion"] ?></p>
+                    <p><i class="fa-solid fa-phone"></i> <?php echo $telefonos[0]["telefono"] ?></p>
+                    <p><i class="fa-regular fa-envelope"></i> <?php echo $info[0]["correo"] ?></p>
+                    <p><i class="fa-solid fa-laptop"></i> <a href="<?php echo $info[0]["sitio"] ?>" target="_blank" title="Sitio web de <?php echo $info[0]["nombre"] ?>">Página web</a></p>
                 </div>
             </div>
         </div>
@@ -162,7 +159,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <a href="#"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+            <a href="#"><img src="../img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
             <p>© 2021 Rantan Food | Todos los derechos reservados</p>
         </div>
 

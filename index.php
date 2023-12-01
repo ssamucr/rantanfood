@@ -1,3 +1,9 @@
+<?php
+    // Iniciar la sesión si no se ha iniciado
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -73,7 +79,7 @@
                       </ul>
                     </nav>
                 </label>
-                <a href="./index.html"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+                <a href="./index.php" title="Página de inicio de RantanFood"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
             </div>
 
             <div class="search-container">
@@ -238,7 +244,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <a href="#"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+            <a href="#" title="Volver arriba"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
             <p>© 2021 Rantan Food | Todos los derechos reservados</p>
         </div>
 
@@ -313,7 +319,7 @@
         </div>
     </dialog>
 
-    <script src="./loginmodal.js"></script>
-    <script src="./reservarmodal.js"></script>
+    <script src="./views/loginmodal.js"></script>
+    <script src="./views/reservarmodal.js"></script>
 </body>
 </html>

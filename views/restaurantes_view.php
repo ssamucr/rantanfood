@@ -1,7 +1,12 @@
 <?php
+    // Iniciar la sesión si aún no se ha iniciado
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+
     foreach ($datos as $dato) {
         echo '<div class="restaurant">';
-        echo '<a href="./views/inforest.html">';
+        echo '<a href="./controllers/inforest_controller.php?restaurante=' . urlencode($dato["id_restaurante"]) . '">';
         echo '<img src="' . $dato["imagen"] .'" alt="imagen de restaurante" class="restaurant-picture">';
         echo '</a>';
         echo '<div class="restaurant-content">';
