@@ -1,4 +1,4 @@
-const btnAbrirLogin = document.querySelector(".login-open");
+const btnAbrirLogin = document.querySelector("#login-open");
 const btnCerrarLogin = document.querySelector("#login-back-btn");
 const Login = document.querySelector("#loginmodal");
 

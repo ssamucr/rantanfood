@@ -351,6 +351,6 @@
 
             idrest.value = idRestaurante;
         }
-    </>
+    </script>
 </body>
 </html>
