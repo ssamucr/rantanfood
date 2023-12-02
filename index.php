@@ -309,9 +309,9 @@
 
                     <label for="babychair">Silla para bebé:</label>
                     <div class="babychair-radio-btn">
-                        <input type="radio" id="babychairyes" name="babychair" required>
+                        <input type="radio" id="babychairyes" name="babychair" value="1" required>
                         <label for="babychairyes">Sí</label>
-                        <input type="radio" id="babychairno" name="babychair" required>
+                        <input type="radio" id="babychairno" name="babychair" value="0" required>
                         <label for="babychairno">No</label>
                     </div>
 

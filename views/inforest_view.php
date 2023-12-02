@@ -54,7 +54,7 @@
                           </button>
                         </li>
                         <li>
-                          <button onclick="window.location.href = './soporte.html'">
+                          <button onclick="window.location.href = '../views/soporte.php'">
                             <svg fill="currentColor" viewBox="0 0 512 512" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
                             </svg>
@@ -73,7 +73,7 @@
                       </ul>
                     </nav>
                 </label>
-                <a href="../index.php"><img src="../img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+                <a href="../index.php" title="Página de inicio de RantanFood"><img src="../img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
             </div>
 
             <div class="search-container">
@@ -84,7 +84,7 @@
             <nav class="main-menu">
                 <ol class="elements-main-menu">
                     <li><a href="./reservaciones.html" class="">Reservaciones</a></li>
-                    <li><a href="./soporte.html" class="">Soporte</a></li>
+                    <li><a href="../views/soporte.php" class="">Soporte</a></li>
                 </ol>
             </nav>
 
@@ -159,14 +159,14 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <a href="#"><img src="../img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+            <a href="#" title="Volver arriba"><img src="../img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
             <p>© 2021 Rantan Food | Todos los derechos reservados</p>
         </div>
 
         <div class="footer-menu">
             <ol class="elements-footer-menu">
                 <li><a href="./reservaciones.html" class="">Reservaciones</a></li>
-                <li><a href="./soporte.html" class="">Soporte</a></li>
+                <li><a href="../views/soporte.php" class="">Soporte</a></li>
             </ol>
         </div>
     </footer>
@@ -204,10 +204,12 @@
                     <button id="reservar-back-btn"><i class="fa-solid fa-xmark"></i></button>
                 </div>
                 <div class="reservar-logo">
-                    <img src="./img/logo.png" alt="Logo de Rantan Food">
+                    <img src="../img/logo.png" alt="Logo de Rantan Food">
                 </div>
                 <h2 class="reservar-heading">Formulario de reservación</h2>
-                <form action="#" method="dialog" class="reservar-form">
+                <form action="../controllers/reservar_controller.php" method="post" class="reservar-form">
+                    <input type="text" id="idrest" name="idrestaurante" style="display: none;" value="<?php echo $info[0]['id_restaurante'] ?>">
+                
                     <label for="fecha">Fecha:</label>
                     <input type="date" id="fecha" name="fecha" required>
 
@@ -222,9 +224,9 @@
 
                     <label for="babychair">Silla para bebé:</label>
                     <div class="babychair-radio-btn">
-                        <input type="radio" id="babychairyes" name="babychair" required>
+                        <input type="radio" id="babychairyes" name="babychair" value="1" required>
                         <label for="babychairyes">Sí</label>
-                        <input type="radio" id="babychairno" name="babychair" required>
+                        <input type="radio" id="babychairno" name="babychair" value="0" required>
                         <label for="babychairno">No</label>
                     </div>
 
@@ -234,7 +236,7 @@
         </div>
     </dialog>
 
-    <script src="./loginmodal.js"></script>
-    <script src="./reservarmodal.js"></script>
+    <script src="../views/loginmodal.js"></script>
+    <script src="../views/reservarmodal.js"></script>
 </body>
 </html>
