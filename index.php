@@ -292,7 +292,9 @@
                     <img src="./img/logo.png" alt="Logo de Rantan Food">
                 </div>
                 <h2 class="reservar-heading">Formulario de reservación</h2>
-                <form action="#" method="dialog" class="reservar-form">
+                <form action="./controllers/reservar_controller.php" method="post" class="reservar-form">
+                    <input type="text" id="idrest" name="idrestaurante" style="display: none;" value="">    
+
                     <label for="fecha">Fecha:</label>
                     <input type="date" id="fecha" name="fecha" required>
 
@@ -321,5 +323,12 @@
 
     <script src="./views/loginmodal.js"></script>
     <script src="./views/reservarmodal.js"></script>
+    <script>
+        function restauranteModal(idRestaurante) {
+            const idrest = document.querySelector("#idrest");
+
+            idrest.value = idRestaurante;
+        }
+    </script>
 </body>
 </html>

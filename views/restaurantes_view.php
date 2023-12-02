@@ -17,7 +17,7 @@
         echo '<p>Tipo: ' . $dato["tipo_restaurante"] . '</p>';
         echo '</div>';
         echo '<div class="restaurant-reservar">';
-        echo '<button onclick="reservarModalShow()" class="reservar-button">Reservar <i class="fa-solid fa-book"></i></button>';
+        echo '<button onclick="restauranteModal('. $dato["id_restaurante"] .'); reservarModalShow();" class="reservar-button">Reservar <i class="fa-solid fa-book"></i></button>';
         echo '</div>';
         echo '</div>';
         echo '</div>';
