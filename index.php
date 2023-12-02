@@ -340,13 +340,17 @@
     </dialog>
 
     <script src="./views/loginmodal.js"></script>
-    <script src="./views/reservarmodal.js"></script>
+    <?php
+        if (isset($_SESSION["idUsuario"])) {
+            echo '<script src="./views/reservarmodal.js"></script>';
+        }
+    ?>
     <script>
         function restauranteModal(idRestaurante) {
             const idrest = document.querySelector("#idrest");
 
             idrest.value = idRestaurante;
         }
-    </script>
+    </>
 </body>
 </html>

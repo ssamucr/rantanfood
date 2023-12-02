@@ -160,7 +160,13 @@
                     <p class="bold">Horario</p>
                     <p><?php echo $info[0]["horario"] ?></p>
                     <div class="restaurant-reservar">
-                        <button class="reservar-button">Reservar <i class="fa-solid fa-book"></i></button>
+                        <?php
+                            if (!isset($_SESSION["idUsuario"])) {
+                                echo '<button onclick="Login.showModal();" class="reservar-button">Reservar <i class="fa-solid fa-book"></i></button>';
+                            } else {
+                                echo '<button class="reservar-button">Reservar <i class="fa-solid fa-book"></i></button>';
+                            }
+                        ?>
                     </div>
                 </div>
                 <div class="location-container">
@@ -261,6 +267,10 @@
     </dialog>
 
     <script src="../views/loginmodal.js"></script>
-    <script src="../views/reservarmodal.js"></script>
+    <?php
+        if (isset($_SESSION["idUsuario"])) {
+            echo '<script src="../views/reservarmodal.js"></script>';
+        }
+    ?>
 </body>
 </html>

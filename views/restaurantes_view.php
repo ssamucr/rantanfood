@@ -17,7 +17,11 @@
         echo '<p>Tipo: ' . $dato["tipo_restaurante"] . '</p>';
         echo '</div>';
         echo '<div class="restaurant-reservar">';
-        echo '<button onclick="restauranteModal('. $dato["id_restaurante"] .'); reservarModalShow();" class="reservar-button">Reservar <i class="fa-solid fa-book"></i></button>';
+        if (!isset($_SESSION["idUsuario"])) {
+            echo '<button onclick="Login.showModal();" class="reservar-button">Reservar <i class="fa-solid fa-book"></i></button>';
+        } else {
+            echo '<button onclick="restauranteModal('. $dato["id_restaurante"] .'); reservarModalShow();" class="reservar-button">Reservar <i class="fa-solid fa-book"></i></button>';
+        }
         echo '</div>';
         echo '</div>';
         echo '</div>';
