@@ -7,7 +7,8 @@
     // Verificar si se ha enviado el formulario
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Conectar a la base de datos (reemplaza los valores con los tuyos)
-        $conexion = new mysqli("localhost", "usuario", "contrasena", "nombre_base_de_datos");
+        require_once("../db/db.php");
+        $conexion = Conectar::conexion();
 
         // Verificar la conexión
         if ($conexion->connect_error) {
@@ -34,7 +35,7 @@
             $_SESSION["nombre"] = $nombre;
             $_SESSION["apellido"] = $apellido;
 
-            header("Location: ./index.php"); // Redirigir a la página principal
+            header("Location: ../index.php"); // Redirigir a la página principal
             exit();
         } else {
             $error = "Correo electrónico o contraseña incorrectos";
