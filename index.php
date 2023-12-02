@@ -269,7 +269,7 @@
                     <img src="./img/logo.png" alt="Logo de Rantan Food">
                 </div>
                 <h2 class="login-heading">Inicio de Sesión</h2>
-                <form action="#" method="dialog" class="login-form">
+                <form action="./controllers/login_controller.php" method="post" class="login-form">
                     <label for="email">Correo Electrónico:</label>
                     <input type="email" id="email" name="email" placeholder="Correo" required autocomplete="off">
                     <p class="create-account-link">¿No tiene una cuenta? <a href="./register.html">Crear una cuenta</a></p>
