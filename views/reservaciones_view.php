@@ -120,7 +120,7 @@
                     echo '</div>';
                     echo '</div>';
                     echo '<div class="reservacion-cancelar">';
-                    echo '<button onclick="" class="reservacion-cancelar-btn">Cancelar</button>';
+                    echo '<button onclick="cancelarReserva('. $reserva["id_reserva"] . ')" class="reservacion-cancelar-btn">Cancelar</button>';
                     echo '</div>';
                     echo '</div>';
                 }
@@ -142,5 +142,12 @@
             </ol>
         </div>
     </footer>
+
+    <script>
+        function cancelarReserva(id_reserva) {
+            window.location.href = "../controllers/cancelar_controller.php?cancelar=" + id_reserva.toString();
+        }
+    </script>
+
 </body>
 </html>
