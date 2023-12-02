@@ -217,7 +217,7 @@
                 <form action="../controllers/login_controller.php" method="post" class="login-form">
                     <label for="email">Correo Electrónico:</label>
                     <input type="email" id="email" name="email" placeholder="Correo" required autocomplete="off">
-                    <p class="create-account-link">¿No tiene una cuenta? <a href="./register.html">Crear una cuenta</a></p>
+                    <p class="create-account-link">¿No tiene una cuenta? <a href="../views/register_view.php">Crear una cuenta</a></p>
                     <label for="password">Contraseña:</label>
                     <input type="password" id="password" name="password" placeholder="Contraseña" required autocomplete="off">
                     <p class="forgotpassword"><a href="#">¿Olvidó su contraseña?</a></p>

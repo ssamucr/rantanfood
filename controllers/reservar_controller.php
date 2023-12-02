@@ -1,4 +1,9 @@
 <?php
+// Iniciar la sesión si no se ha iniciado
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 require_once("../db/db.php");
 // Verifica si se han recibido datos del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -9,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $adultos = $_POST["adultos"];
     $ninos = $_POST["ninos"];
     $babychair = $_POST["babychair"];
-    $usuario = 1;
+    $usuario = $_SESSION["idUsuario"];
 
     // Realiza la conexión a la base de datos
     $conexion = Conectar::conexion();

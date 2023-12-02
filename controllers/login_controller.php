@@ -15,34 +15,37 @@
             die("Conexión fallida: " . $conexion->connect_error);
         }
 
-        // Obtener los valores del formulario
-        $email = $_POST["email"];
-        $password = $_POST["password"];
+        // Obtener el correo y la contraseña ingresados por el usuario
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
-        // Consulta para verificar si las credenciales son válidas
-        $consulta = $conexion->prepare("SELECT id_usuario, nombre, apellido FROM usuario WHERE correo = ? AND contrasena = ?");
-        $consulta->bind_param("ss", $email, $password);
+        // Obtener el hash almacenado en la base de datos (reemplaza esto con tu lógica para obtener el hash)
+        $consulta = $conexion->prepare("SELECT id_usuario, nombre, apellido, contrasena FROM usuario WHERE correo = ?");
+        $consulta->bind_param("s", $email);
         $consulta->execute();
         $consulta->store_result();
+        $consulta->bind_result($idUsuario, $nombre, $apellido, $hash_almacenado);
+        $consulta->fetch();
 
         // Verificar si se encontraron resultados
         if ($consulta->num_rows > 0) {
-            // Iniciar sesión y redirigir al usuario a la página principal
-            $consulta->bind_result($idUsuario, $nombre, $apellido);
-            $consulta->fetch();
+            // Verificar la contraseña utilizando password_verify
+            if (password_verify($password, $hash_almacenado)) {
+                // Iniciar sesión y redirigir al usuario a la página principal
+                $_SESSION["idUsuario"] = $idUsuario;
+                $_SESSION["nombre"] = $nombre;
+                $_SESSION["apellido"] = $apellido;
 
-            $_SESSION["idUsuario"] = $idUsuario;
-            $_SESSION["nombre"] = $nombre;
-            $_SESSION["apellido"] = $apellido;
-
-            header("Location: ../index.php"); // Redirigir a la página principal
-            exit();
-        } else {
-            $error = "Correo electrónico o contraseña incorrectos";
+                header("Location: ../index.php"); // Redirigir a la página principal
+                exit();
+            } else {
+                header("Location: ../index.php"); // Redirigir a la página principal
+                exit();
+            }
         }
 
-        // Cerrar la conexión
         $consulta->close();
         $conexion->close();
     }
+
 ?>

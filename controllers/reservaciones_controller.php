@@ -1,4 +1,8 @@
 <?php
+    // Iniciar la sesión si no se ha iniciado
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
     require_once("../db/db.php");
 
     //Llamada al modelo
