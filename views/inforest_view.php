@@ -103,7 +103,7 @@
             <div class="personal">
                 <?php
                     if (!isset($_SESSION["idUsuario"])) {
-                        echo '<button id="login-open" class="login-button">Iniciar sesión</button>';
+                        echo '<button onclick="Login.showModal();" class="login-button">Iniciar sesión</button>';
                     } else {
                         echo '<button onclick="window.location.href = \'../controllers/cerrar_sesion_controller.php\'" class="login-button">Cerrar sesión</button>';
                     }
@@ -185,7 +185,7 @@
             <ol class="elements-footer-menu">
                 <?php
                     if (!isset($_SESSION["idUsuario"])) {
-                        echo '<li><a id="login-open" class="">Reservaciones</a></li>';
+                        echo '<li><a onclick="Login.showModal();" class="">Reservaciones</a></li>';
                     } else {
                         echo '<li><a href="../controllers/reservaciones_controller.php" class="">Reservaciones</a></li>';
                     }

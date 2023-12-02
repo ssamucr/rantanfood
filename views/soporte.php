@@ -90,7 +90,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <ol class="elements-main-menu">
                     <?php
                         if (!isset($_SESSION["idUsuario"])) {
-                            echo '<li><a id="login-open" class="">Reservaciones</a></li>';
+                            echo '<li><a onclick="Login.showModal();" class="">Reservaciones</a></li>';
                         } else {
                             echo '<li><a href="../controllers/reservaciones_controller.php" class="">Reservaciones</a></li>';
                         }
@@ -148,7 +148,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <ol class="elements-footer-menu">
                     <?php
                         if (!isset($_SESSION["idUsuario"])) {
-                            echo '<li><a id="login-open" class="">Reservaciones</a></li>';
+                            echo '<li><a onclick="Login.showModal();" class="">Reservaciones</a></li>';
                         } else {
                             echo '<li><a href="../controllers/reservaciones_controller.php" class="">Reservaciones</a></li>';
                         }

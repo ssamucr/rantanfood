@@ -91,7 +91,7 @@
                 <ol class="elements-main-menu">
                     <?php
                         if (!isset($_SESSION["idUsuario"])) {
-                            echo '<li><a id="login-open" class="">Reservaciones</a></li>';
+                            echo '<li><a onclick="Login.showModal();" class="">Reservaciones</a></li>';
                         } else {
                             echo '<li><a href="./controllers/reservaciones_controller.php" class="">Reservaciones</a></li>';
                         }
@@ -262,7 +262,13 @@
 
         <div class="footer-menu">
             <ol class="elements-footer-menu">
-                <li><a href="./controllers/reservaciones_controller.php" class="">Reservaciones</a></li>
+                <?php
+                    if (!isset($_SESSION["idUsuario"])) {
+                        echo '<li><a onclick="Login.showModal();" class="">Reservaciones</a></li>';
+                    } else {
+                        echo '<li><a href="./controllers/reservaciones_controller.php" class="">Reservaciones</a></li>';
+                    }
+                ?>
                 <li><a href="./views/soporte.php" class="">Soporte</a></li>
             </ol>
         </div>
