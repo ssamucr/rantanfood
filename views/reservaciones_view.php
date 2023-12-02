@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rantan Food</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./views/styles/header.css">
-    <link rel="stylesheet" href="./views/styles/reservaciones.css">
-    <link rel="stylesheet" href="./views/styles/footer.css">
-    <link rel="stylesheet" href="./views/styles/login.css">
+    <link rel="stylesheet" href="../views/styles/header.css">
+    <link rel="stylesheet" href="../views/styles/reservaciones.css">
+    <link rel="stylesheet" href="../views/styles/footer.css">
+    <link rel="stylesheet" href="../views/styles/login.css">
 </head>
 <body>
     <header>
@@ -45,7 +45,7 @@
                         </li>
                         <hr>
                         <li>
-                          <button onclick="window.location.href = './reservaciones.html'">
+                          <button onclick="window.location.href = './reservaciones_controller.php'">
                             <svg fill="currentColor" viewBox="0 0 384 512" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M192 0c-41.8 0-77.4 26.7-90.5 64H64C28.7 64 0 92.7 0 128V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H282.5C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM72 272a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm104-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16zM72 368a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16z"/>
                             </svg>
@@ -53,7 +53,7 @@
                           </button>
                         </li>
                         <li>
-                          <button onclick="window.location.href = './soporte.html'">
+                          <button onclick="window.location.href = '../views/soporte.php'">
                             <svg fill="currentColor" viewBox="0 0 512 512" height="14" width="14" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
                             </svg>
@@ -72,7 +72,7 @@
                       </ul>
                     </nav>
                 </label>
-                <a href="./index.html"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+                <a href="../index.php" title="Página principal de RantanFood"><img src="../img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
             </div>
 
             <div class="search-container">
@@ -82,8 +82,8 @@
 
             <nav class="main-menu">
                 <ol class="elements-main-menu">
-                    <li><a href="./reservaciones.html" class="selected">Reservaciones</a></li>
-                    <li><a href="./soporte.html" class="">Soporte</a></li>
+                    <li><a href="./reservaciones_controller.php" class="selected">Reservaciones</a></li>
+                    <li><a href="../views/soporte.php" class="">Soporte</a></li>
                 </ol>
             </nav>
 
@@ -157,14 +157,14 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <a href="#"><img src="./img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
+            <a href="#" title="Volver arriba"><img src="../img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
             <p>© 2021 Rantan Food | Todos los derechos reservados</p>
         </div>
 
         <div class="footer-menu">
             <ol class="elements-footer-menu">
-                <li><a href="./reservaciones.html" class="selected">Reservaciones</a></li>
-                <li><a href="./soporte.html" class="">Soporte</a></li>
+                <li><a href="./reservaciones_controller.php" class="selected">Reservaciones</a></li>
+                <li><a href="../views/soporte.php" class="">Soporte</a></li>
             </ol>
         </div>
     </footer>
