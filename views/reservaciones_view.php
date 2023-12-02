@@ -99,59 +99,33 @@
 
     <main class="main">
         <div class="reservaciones-container">                
-            <div class="reservacion">
-                <h2>Restaurante: <a href="./inforest.html">Da Stefano's</a></h2>
-                <div class="reservacion-content">
-                    <div class="reservacion-date">
-                        <p>Fecha: 28/10/2023</p>
-                        <p>Hora: 01:30 p.m.</p>
-                    </div>
-                    <div class="reservacion-count">
-                        <p>Cantidad de adultos: 2</p>
-                        <p>Cantidad de niños: 1</p>
-                        <p>Sillas para bebé: Sí <i class="fa-solid fa-circle-check"></i></p>
-                    </div>
-                </div>
-                <div class="reservacion-cancelar">
-                    <button onclick="" class="reservacion-cancelar-btn">Cancelar</button>
-                </div>
-            </div>
             
-            <div class="reservacion">
-                <h2>Restaurante: <a href="./inforest.html">Hamburguesía</a></h2>
-                <div class="reservacion-content">
-                    <div class="reservacion-date">
-                        <p>Fecha: 3/11/2023</p>
-                        <p>Hora: 04:30 p.m.</p>
-                    </div>
-                    <div class="reservacion-count">
-                        <p>Cantidad de adultos: 4</p>
-                        <p>Cantidad de niños: 2</p>
-                        <p>Sillas para bebé: No <i class="fa-solid fa-circle-xmark"></i></p>
-                    </div>
-                </div>
-                <div class="reservacion-cancelar">
-                    <button onclick="" class="reservacion-cancelar-btn">Cancelar</button>
-                </div>
-            </div>
-            
-            <div class="reservacion">
-                <h2>Restaurante: <a href="./inforest.html">Arepa Truck</a></h2>
-                <div class="reservacion-content">
-                    <div class="reservacion-date">
-                        <p>Fecha: 5/11/2023</p>
-                        <p>Hora: 06:00 p.m.</p>
-                    </div>
-                    <div class="reservacion-count">
-                        <p>Cantidad de adultos: 6</p>
-                        <p>Cantidad de niños: 0</p>
-                        <p>Sillas para bebé: No <i class="fa-solid fa-circle-xmark"></i></p>
-                    </div>
-                </div>
-                <div class="reservacion-cancelar">
-                    <button onclick="" class="reservacion-cancelar-btn">Cancelar</button>
-                </div>
-            </div>
+            <?php
+                foreach ($datos as $reserva) {
+                    echo '<div class="reservacion">';
+                    echo '<h2>Restaurante: <a href="../controllers/inforest_controller.php?restaurante=' . urlencode($reserva["id_restaurante"]) . '">' . $reserva["nombre_restaurante"] . '</a></h2>';
+                    echo '<div class="reservacion-content">';
+                    echo '<div class="reservacion-date">';
+                    echo '<p>Fecha: ' . $reserva["fecha"] . '</p>';
+                    echo '<p>Hora: ' . $reserva["hora"] . '</p>';
+                    echo '</div>';
+                    echo '<div class="reservacion-count">';
+                    echo '<p>Cantidad de adultos: ' . $reserva["cantidad_adultos"] . '</p>';
+                    echo '<p>Cantidad de niños: ' . $reserva["cantidad_ninos"] . '</p>';
+                    if ($reserva["silla_bebe"] == 0) {
+                        echo '<p>Sillas para bebé: No <i class="fa-solid fa-circle-xmark"></i></p>';
+                    } elseif ($reserva["silla_bebe"] == 1) {
+                        echo '<p>Sillas para bebé: Sí <i class="fa-solid fa-circle-check"></i></p>';
+                    }
+                    echo '</div>';
+                    echo '</div>';
+                    echo '<div class="reservacion-cancelar">';
+                    echo '<button onclick="" class="reservacion-cancelar-btn">Cancelar</button>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            ?>
+        
         </div>
     </main>
 

@@ -9,7 +9,7 @@ class reservaciones_model{
     }
     public function get_reservaciones(){
         $id_usuario = 1;
-        $consulta=$this->db->query("select * from reserva where id_usuario = $id_usuario;");
+        $consulta=$this->db->query("select reserva.*, restaurante.nombre as nombre_restaurante from reserva join restaurante on reserva.id_restaurante=restaurante.id_restaurante where reserva.id_usuario = $id_usuario;");
         while($filas=$consulta->fetch_assoc()){
             $this->reservaciones[]=$filas;
         }
