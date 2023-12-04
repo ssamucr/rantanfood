@@ -120,12 +120,31 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="soporte-container">
             <div class="soporte-contact">
                 <h2>Información de contacto general</h2>
-                <p>Dirección de correo postal: Rantan Food Inc., C. 73 Este, San Francisco, Panamá</p>
-                <p>Número de teléfono general de la empresa: +507 272-8050</p>
+                <table>
+                    <tr>
+                        <td class="soporte-celda">Ubicación: </td>
+                        <td>Rantan Food Inc., C. 73 Este, San Francisco, Panamá</td>                      
+                    </tr>
+                    <tr>
+                        <td>Teléfono: </td>
+                        <td>+507 272-8050</td>
+                    </tr>
+                    <tr>
+                        <td>Correo: </td>
+                        <td><i class="fa-regular fa-envelope"></i> soporte@rantanfood.com</td>
+                    </tr>
+                </table>
                 <h2>¿Eres el propietario de un restaurante? Escríbenos para:</h2>
-                <p>Obtén un perfil: Los propietarios de restaurantes que estén interesados en un perfil GRATUITO.</p>
-                <p>Problemas o preguntas sobre los perfiles: Si tienes algún problema o más preguntas sobre los perfiles o las opiniones.</p>
-                <p><i class="fa-regular fa-envelope"></i>soporte@rantanfood.com</p>
+                <table>
+                    <tr>
+                        <td>Obtener un perfil:</td>
+                        <td>Los propietarios de restaurantes que estén interesados en un perfil GRATUITO.</td>                      
+                    </tr>
+                    <tr>
+                        <td>Problemas o preguntas sobre los perfiles:</td>
+                        <td>Si tienes algún problema o más preguntas sobre los perfiles o las opiniones.</td>
+                    </tr>
+                </table>
             </div>
 
             <div class="soporte-conocenos">
