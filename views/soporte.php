@@ -122,7 +122,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <h2>Información de contacto general</h2>
                 <table>
                     <tr>
-                        <td class="soporte-celda">Ubicación: </td>
+                        <td>Ubicación: </td>
                         <td>Rantan Food Inc., C. 73 Este, San Francisco, Panamá</td>                      
                     </tr>
                     <tr>
@@ -143,6 +143,10 @@ if (session_status() == PHP_SESSION_NONE) {
                     <tr>
                         <td>Problemas o preguntas sobre los perfiles:</td>
                         <td>Si tienes algún problema o más preguntas sobre los perfiles o las opiniones.</td>
+                    </tr>
+                    <tr>
+                        <td>Correo:</td>
+                        <td><i class="fa-regular fa-envelope"></i> propietarios@rantanfood.com</td>
                     </tr>
                 </table>
             </div>

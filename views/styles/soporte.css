@@ -40,7 +40,6 @@ main {
     margin: 1em 0.5em 1em 1em;
 }
 
-.soporte-celda {
-    padding: 5em;
-    background-color: black;
+td {
+    padding: 0.5em;
 }
