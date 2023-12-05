@@ -128,7 +128,7 @@
                 <?php
                     foreach ($platos as $plato) {
                         echo '<div class="card">';
-                        echo '<img src=".' . $plato["imagen"] . '" alt="Plato de comida" class="card__image">';
+                        echo '<img src=".' . $plato["imagen"] . '" alt="Plato de comida: ' . $plato["nombre"] . '" class="card__image">';
                         echo '<h3>' . $plato["nombre"] . '</h3>';
                         echo '<div class="card__content">';
                         echo '<p class="card__title">' . $plato["nombre"] . '</p>';

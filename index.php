@@ -84,7 +84,7 @@
 
             <form action="#" method="post" class="search-container">
                 <i class="fa fa-search search-icon"></i>
-                <input type="search" class="search" placeholder="Buscar restaurante">
+                <input id="search" type="search" class="search" placeholder="Buscar restaurante">
             </form>
 
             <nav class="main-menu">
