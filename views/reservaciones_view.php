@@ -75,10 +75,10 @@
                 <a href="../index.php" title="Página principal de RantanFood"><img src="../img/logo.png" alt="Logo de Rantan Food" class="logo"></a>
             </div>
 
-            <div class="search-container">
+            <form action="#" method="post" class="search-container">
                 <i class="fa fa-search search-icon"></i>
                 <input type="search" class="search" placeholder="Buscar restaurante">
-            </div>
+            </form>
 
             <nav class="main-menu">
                 <ol class="elements-main-menu">

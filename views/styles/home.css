@@ -80,11 +80,14 @@
 }
 
 .restaurant .restaurant-content h2 {
-    position: absolute;
+    /* position: absolute;
     top: -1.5em;
-    left: 0.5em;
-    color: #ffffff;
-    text-shadow:  0em 0em .3125em #000000, 0em 0em .3125em #030202, 0em 0em .3125em #000000;
+    left: 0.5em; */
+    color: var(--font-color);
+    /* text-shadow:  0em 0em .3125em #000000, 0em 0em .3125em #030202, 0em 0em .3125em #000000;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1),rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); */
+    width: 100%;
+    padding: 0.05em;
 }
 
 .restaurant .restaurant-content p {
