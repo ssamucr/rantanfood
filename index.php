@@ -315,6 +315,13 @@
                     <label for="password">Contraseña:</label>
                     <input type="password" id="password" name="password" placeholder="Contraseña" required autocomplete="off">
                     <p class="forgotpassword"><a href="#">¿Olvidó su contraseña?</a></p>
+                    <?php
+                        if (isset($_SESSION['registro_error']) && $_SESSION['registro_error'] != 'nada') {
+                            echo '<div class="registro-error" role="alert">' . $_SESSION['registro_error'] . '</div>';
+                            unset($_SESSION['registro_error']);
+                            $_SESSION['mostrar_login'] = true;
+                        }
+                    ?>
                     <button class="login-button" type="submit">Iniciar Sesión</button>
                 </form>
             </div>
@@ -372,6 +379,12 @@
 
             idrest.value = idRestaurante;
         }
+        <?php
+            if (isset($_SESSION['mostrar_login'])) {
+                echo 'Login.showModal();';
+                unset($_SESSION['mostrar_login']);
+            }
+        ?>
     </script>
 </body>
 </html>

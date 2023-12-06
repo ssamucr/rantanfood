@@ -71,6 +71,16 @@
     font-size: 1.2em;
 }
 
+.registro-error {
+    color: #58151C;
+    border: 1px solid #d77b84;
+    background-color: #f8d7da;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.825rem;
+}
+
 @media screen and (max-width: 834px) {
     * {
         margin: 0;

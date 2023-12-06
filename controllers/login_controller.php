@@ -35,17 +35,20 @@
                 $_SESSION["idUsuario"] = $idUsuario;
                 $_SESSION["nombre"] = $nombre;
                 $_SESSION["apellido"] = $apellido;
+                $_SESSION['registro_error'] = "nada";
 
                 header("Location: ../index.php"); // Redirigir a la página principal
                 exit();
             } else {
-                header("Location: ../index.php"); // Redirigir a la página principal
+                $_SESSION['registro_error'] = "El correo o la contraseña son incorrectos.";
+                header("Location: ../index.php");
                 exit();
             }
+        } else {
+            $_SESSION['registro_error'] = "El correo o la contraseña son incorrectos.";
+            header("Location: ../index.php");
+            exit();
         }
-
-        $consulta->close();
-        $conexion->close();
     }
 
 ?>
