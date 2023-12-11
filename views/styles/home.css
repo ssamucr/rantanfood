@@ -122,6 +122,15 @@
 
 /* Termina estilo de los cards */
 
+.no-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5em;
+    font-size: 2em;
+}
+
 @media screen and (max-width: 834px) {
     .main {
         display: flex;
@@ -134,7 +143,7 @@
         flex-direction: row;
         overflow: scroll;
     }
-
+    
     .filter fieldset {
         min-width: 10em;
     }

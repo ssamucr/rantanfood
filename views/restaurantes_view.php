@@ -4,6 +4,10 @@
         session_start();
     }
 
+    if (empty($datos)) {
+        echo '<div class="no-results"><p>No se encontraron resultados</p></div>';
+    }
+
     foreach ($datos as $dato) {
         echo '<div class="restaurant">';
         echo '<a href="./controllers/inforest_controller.php?restaurante=' . urlencode($dato["id_restaurante"]) . '">';
