@@ -7,8 +7,8 @@ class restaurantes_model{
         $this->db=Conectar::conexion();
         $this->restaurantes=array();
     }
-    public function get_restaurantes(){
-        $consulta=$this->db->query("select * from restaurante;");
+    public function get_restaurantes($query){
+        $consulta=$this->db->query($query);
         while($filas=$consulta->fetch_assoc()){
             $this->restaurantes[]=$filas;
         }

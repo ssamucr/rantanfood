@@ -59,12 +59,8 @@ if ($contrasena !== $confirmar_contrasena) {
     if ($consulta->execute()) {
         // Registro exitoso, obtén el ID del usuario recién creado
         $_SESSION["idUsuario"] = $conexion->insert_id;
-
-        // Registro exitoso, puedes redirigir al usuario a una página de éxito o hacer otras acciones necesarias
-        echo "Registro exitoso. Usuario registrado.";
     } else {
         // Error en la ejecución de la consulta, manejar el error adecuadamente
-        echo "Error en el registro. Por favor, inténtalo de nuevo.";
     }
 
     $consulta->close();

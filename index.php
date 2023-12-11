@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./views/styles/footer.css">
     <link rel="stylesheet" href="./views/styles/login.css">
     <link rel="stylesheet" href="./views/styles/reservar.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
     <header>
@@ -105,7 +106,7 @@
 
             <form action="#" method="post" class="search-container">
                 <i class="fa fa-search search-icon"></i>
-                <input id="search" type="search" class="search" placeholder="Buscar restaurante">
+                <input id="search" type="search" class="search" placeholder="Buscar restaurante" name="search">
             </form>
 
             <nav class="main-menu">
@@ -140,46 +141,49 @@
 
     <main class="main">
         <div class="filter-container">
-            <form action="" class="filter-form">                
+            <form action="" class="filter-form" id="filter-form">                
                 <div class="filter">
                     <fieldset class="filter-tipocom">
                         <legend>Tipo de comida:</legend>
-                        <input type="radio" id="tipocomida-all" name="tipocomida" value="all" checked>
+                        <input type="radio" class="elemento-filtro" id="tipocomida-all" name="tipocomida" value="all" checked>
                         <label for="tipocomida-all">Todas</label>
                         <br>
-                        <input type="radio" id="tipocomida-panamena" name="tipocomida" value="panamena">
+                        <input type="radio" class="elemento-filtro" id="tipocomida-panamena" name="tipocomida" value="Comida Panameña">
                         <label for="tipocomida-panamena">Panameña</label>
                         <br>
-                        <input type="radio" id="tipocomida-italiana" name="tipocomida" value="italiana">
+                        <input type="radio" class="elemento-filtro" id="tipocomida-italiana" name="tipocomida" value="Comida Italiana">
                         <label for="tipocomida-italiana">Italiana</label>
                         <br>
-                        <input type="radio" id="tipocomida-india" name="tipocomida" value="india">
+                        <input type="radio" class="elemento-filtro" id="tipocomida-india" name="tipocomida" value="Comida India">
                         <label for="tipocomida-india">India</label>
                         <br>
-                        <input type="radio" id="tipocomida-venezolana" name="tipocomida" value="venezolana">
+                        <input type="radio" class="elemento-filtro" id="tipocomida-venezolana" name="tipocomida" value="Comida Venezolana">
                         <label for="tipocomida-venezolana">Venezolana</label>
                         <br>
-                        <input type="radio" id="tipocomida-peruana" name="tipocomida" value="peruana">
+                        <input type="radio" class="elemento-filtro" id="tipocomida-peruana" name="tipocomida" value="Comida Peruana">
                         <label for="tipocomida-peruana">Peruana</label>
                         <br>
-                        <input type="radio" id="tipocomida-brasilena" name="tipocomida" value="brasilena">
+                        <input type="radio" class="elemento-filtro" id="tipocomida-brasilena" name="tipocomida" value="Comida Brasileña">
                         <label for="tipocomida-brasilena">Brasileña</label>
+                        <br>
+                        <input type="radio" class="elemento-filtro" id="tipocomida-americana" name="tipocomida" value="Comida Americana">
+                        <label for="tipocomida-americana">Americana</label>
                     </fieldset>
                 </div>
 
                 <div class="filter">
                     <fieldset class="filter-tiporest">
                         <legend>Tipo de restaurante:</legend>
-                        <input type="radio" id="tiporestaurante-all" name="tiporestaurante" value="all" checked>
+                        <input type="radio" class="elemento-filtro" id="tiporestaurante-all" name="tiporestaurante" value="all" checked>
                         <label for="tiporestaurante-all">Todos</label>
                         <br>
-                        <input type="radio" id="tiporestaurante-foodtruck" name="tiporestaurante" value="foodtruck">
+                        <input type="radio" class="elemento-filtro" id="tiporestaurante-foodtruck" name="tiporestaurante" value="Food Truck">
                         <label for="tiporestaurante-foodtruck">Food Truck</label>
                         <br>
-                        <input type="radio" id="tiporestaurante-bistro" name="tiporestaurante" value="bistro">
+                        <input type="radio" class="elemento-filtro" id="tiporestaurante-bistro" name="tiporestaurante" value="Bistro">
                         <label for="tiporestaurante-bistro">Bistro</label>
                         <br>
-                        <input type="radio" id="tiporestaurante-restaurante" name="tiporestaurante" value="restaurante">
+                        <input type="radio" class="elemento-filtro" id="tiporestaurante-restaurante" name="tiporestaurante" value="Restaurante">
                         <label for="tiporestaurante-restaurante">Restaurante</label>
                     </fieldset>
                 </div>
@@ -187,37 +191,37 @@
                 <div class="filter">
                     <fieldset class="filter-provincia">
                         <legend>Provincia:</legend>
-                        <input type="radio" id="provincia-all" name="provincia" value="all" checked>
+                        <input type="radio" class="elemento-filtro" id="provincia-all" name="provincia" value="all" checked>
                         <label for="provincia-all">Todo el país</label>
                         <br>
-                        <input type="radio" id="provincia-panama" name="provincia" value="panama">
+                        <input type="radio" class="elemento-filtro" id="provincia-panama" name="provincia" value="Panamá">
                         <label for="provincia-panama">Panamá</label>
                         <br>
-                        <input type="radio" id="provincia-west" name="provincia" value="west">
+                        <input type="radio" class="elemento-filtro" id="provincia-west" name="provincia" value="Panamá Oeste">
                         <label for="provincia-west">Panamá oeste</label>
                         <br>
-                        <input type="radio" id="provincia-darien" name="provincia" value="darien">
+                        <input type="radio" class="elemento-filtro" id="provincia-darien" name="provincia" value="Darién">
                         <label for="provincia-darien">Darién</label>
                         <br>
-                        <input type="radio" id="provincia-cocle" name="provincia" value="cocle">
+                        <input type="radio" class="elemento-filtro" id="provincia-cocle" name="provincia" value="Coclé">
                         <label for="provincia-cocle">Coclé</label>
                         <br>
-                        <input type="radio" id="provincia-chiriqui" name="provincia" value="chiriqui">
+                        <input type="radio" class="elemento-filtro" id="provincia-chiriqui" name="provincia" value="Chiriquí">
                         <label for="provincia-chiriqui">Chiriquí</label>
                         <br>
-                        <input type="radio" id="provincia-bocas" name="provincia" value="bocas">
+                        <input type="radio" class="elemento-filtro" id="provincia-bocas" name="provincia" value="Bocas del Toro">
                         <label for="provincia-bocas">Bocas del Toro</label>
                         <br>
-                        <input type="radio" id="provincia-lossantos" name="provincia" value="lossantos">
+                        <input type="radio" class="elemento-filtro" id="provincia-lossantos" name="provincia" value="Los Santos">
                         <label for="provincia-lossantos">Los Santos</label>
                         <br>
-                        <input type="radio" id="provincia-veraguas" name="provincia" value="veraguas">
+                        <input type="radio" class="elemento-filtro" id="provincia-veraguas" name="provincia" value="Veraguas">
                         <label for="provincia-veraguas">Veraguas</label>
                         <br>
-                        <input type="radio" id="provincia-herrera" name="provincia" value="herrera">
+                        <input type="radio" class="elemento-filtro" id="provincia-herrera" name="provincia" value="Herrera">
                         <label for="provincia-herrera">Herrera</label>
                         <br>
-                        <input type="radio" id="provincia-colon" name="provincia" value="colon">
+                        <input type="radio" class="elemento-filtro" id="provincia-colon" name="provincia" value="Colón">
                         <label for="provincia-colon">Colón</label>
                     </fieldset>
                 </div>
@@ -225,16 +229,16 @@
                 <div class="filter">
                     <fieldset class="filter-costo">
                         <legend>Costo:</legend>
-                        <input type="radio" id="costo-all" name="costo" value="all" checked>
+                        <input type="radio" class="elemento-filtro" id="costo-all" name="costo" value="all" checked>
                         <label for="costo-all">Cualquier costo</label>
                         <br>
-                        <input type="radio" id="costo-barato" name="costo" value="barato">
+                        <input type="radio" class="elemento-filtro" id="costo-barato" name="costo" value="Barato $">
                         <label for="costo-barato">Barato <i class="fa-duotone fa-dollar-sign"></i></label>
                         <br>
-                        <input type="radio" id="costo-regular" name="costo" value="regular">
+                        <input type="radio" class="elemento-filtro" id="costo-regular" name="costo" value="Regular $$">
                         <label for="costo-regular">Regular <i class="fa-duotone fa-dollar-sign"></i><i class="fa-duotone fa-dollar-sign"></i></label>
                         <br>
-                        <input type="radio" id="costo-caro" name="costo" value="caro">
+                        <input type="radio" class="elemento-filtro" id="costo-caro" name="costo" value="Caro $$$">
                         <label for="costo-caro">Caro <i class="fa-duotone fa-dollar-sign"></i><i class="fa-duotone fa-dollar-sign"></i><i class="fa-duotone fa-dollar-sign"></i></label>
                     </fieldset>
                 </div>
@@ -242,22 +246,22 @@
                 <div class="filter">
                     <fieldset class="filter-facilidades">
                         <legend>Facilidades:</legend>
-                        <input type="radio" id="facilidades-all" name="facilidades" value="all" checked>
+                        <input type="radio" class="elemento-filtro" id="facilidades-all" name="facilidades" value="all" checked>
                         <label for="facilidades-all">Todas</label>
                         <br>
-                        <input type="radio" id="facilidades-babychair" name="facilidades" value="babychair">
+                        <input type="radio" class="elemento-filtro" id="facilidades-babychair" name="facilidades" value="sillas para bebé">
                         <label for="facilidades-babychair">Silla para bebés</label>
                         <br>
-                        <input type="radio" id="facilidades-childremmenu" name="facilidades" value="childrenmenu">
+                        <input type="radio" class="elemento-filtro" id="facilidades-childremmenu" name="facilidades" value="menú de niños">
                         <label for="facilidades-childremmenu">Menú de niños</label>
                         <br>
-                        <input type="radio" id="facilidades-changingtable" name="facilidades" value="changingtable">
+                        <input type="radio" class="elemento-filtro" id="facilidades-changingtable" name="facilidades" value="Cambiador">
                         <label for="facilidades-changingtable">Cambiador</label>
                         <br>
-                        <input type="radio" id="facilidades-disability" name="facilidades" value="disability">
+                        <input type="radio" class="elemento-filtro" id="facilidades-disability" name="facilidades" value="accesible para personas con discapacidad móvil">
                         <label for="facilidades-disability">Accesible a personas con discapacidad móvil</label>
                         <br>
-                        <input type="radio" id="facilidades-parking" name="facilidades" value="parking">
+                        <input type="radio" class="elemento-filtro" id="facilidades-parking" name="facilidades" value="parking">
                         <label for="facilidades-parking">Parking</label>
                     </fieldset>
                 </div>
@@ -385,6 +389,56 @@
                 unset($_SESSION['mostrar_login']);
             }
         ?>
+        $(document).ready(function() {
+            // Agrega un event listener de envío de formulario
+            $('.search-container').submit(function(event) {
+                // Evita que la acción predeterminada del enlace o botón se ejecute
+                event.preventDefault();
+                
+                // Obtiene los datos del formulario
+                var formDataFilters = $('#filter-form').serialize();
+                var formDataSearch = $('.search-container').serialize();
+                var formData = formDataFilters + '&' + formDataSearch;
+
+                // Realiza la solicitud AJAX para enviar los datos a un archivo PHP
+                $.ajax({
+                    type: 'POST',
+                    url: './controllers/restaurantes_controller.php',
+                    data: formData,
+                    success: function(response) {
+                        // Maneja la respuesta del servidor
+                        $(".restaurants-container").html(response);
+                    },
+                    error: function(error) {
+                        // Maneja los errores de la solicitud AJAX si es necesario
+                        console.error('Error en la solicitud AJAX:', error);
+                    }
+                });
+            });
+
+            // Agrega un event listener de clic a todos los elementos con la clase "elemento-filtro"
+            $('.elemento-filtro').click(function() {
+                // Obtiene los datos del formulario
+                var formDataFilters = $('#filter-form').serialize();
+                var formDataSearch = $('.search-container').serialize();
+                var formData = formDataFilters + '&' + formDataSearch;
+
+                // Realiza la solicitud AJAX para enviar los datos a un archivo PHP
+                $.ajax({
+                    type: 'POST',
+                    url: './controllers/restaurantes_controller.php',
+                    data: formData,
+                    success: function(response) {
+                        // Maneja la respuesta del servidor
+                        $(".restaurants-container").html(response);
+                    },
+                    error: function(error) {
+                        // Maneja los errores de la solicitud AJAX si es necesario
+                        console.error('Error en la solicitud AJAX:', error);
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
